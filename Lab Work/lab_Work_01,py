@@ -1,0 +1,30 @@
+
+# Calculate the slope of a line
+
+x1 = float(input("Enter x1: "))
+y1 = float(input("Enter y1: "))
+
+x2 = float(input("Enter x2: "))
+y2 = float(input("Enter y2: "))
+
+# Check vertical line
+if x1 == x2:
+    print("Slope is undefined (vertical line)")
+
+else:
+    # Calculate slope
+    m = (y2 - y1) / (x2 - x1)
+
+    # Check slope type
+    if m > 0:
+        result = "positive"
+    elif m < 0:
+        result = "negative"
+    else:
+        result = "zero"
+
+    # Check slope range
+    if abs(m) <= 1:
+        print(f"Slope m = {m:.2f} ({result}), |m| <= 1")
+    else:
+        print(f"Slope m = {m:.2f} ({result}), |m| > 1")
